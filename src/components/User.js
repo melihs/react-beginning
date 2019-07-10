@@ -7,7 +7,11 @@ class User extends Component {
     state = {
         isVisible : false
     }
-    onClickEvent = (number,e) => { console.log(number) }
+    onClickEvent = (number,e) => {
+        this.setState({
+            isVisible : !this.state.isVisible
+        })
+    }
 
     render() {
         const { name,department,salary } = this.props;
