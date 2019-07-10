@@ -27,7 +27,7 @@ class User extends Component {
                         {
                             isVisible ?
                                 <CardBody>
-                                    <CardText>Maaş :  { salary }</CardText>
+                                    <CardText>Maaş :  { salary } TL</CardText>
                                     <CardText>Departman :  { department }</CardText>
                                 </CardBody>
                                 : null

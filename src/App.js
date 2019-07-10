@@ -1,29 +1,45 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
-import User from './components/User';
+import Users from './components/Users';
 import Navbar from './components/Navbar';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import {faCheckSquare,faTrashAlt} from '@fortawesome/free-solid-svg-icons'
 
 library.add(faCheckSquare, faTrashAlt)
 
-function App() {
-  return (
-    <div className="App">
-        <Navbar title="User App"/>
-        <hr/>
-        <User
-            name="user 1"
-            department="bilişim"
-            salary="5000 TL"
-        />
-        <User
-            name="user 2"
-            department="tekstil"
-            salary="7500 TL"
-        />
-    </div>
-  );
+class App extends Component {
+    state = {
+        mocUsers : [
+            {
+                id : 1,
+                name : 'test user 1',
+                department : 'ar-ge',
+                salary : '4200'
+            },
+            {
+                id : 2,
+                name : 'test user 2',
+                department : 'avukat',
+                salary : '6000'
+            },
+            {
+                id : 3,
+                name : 'test user 3',
+                department : 'yönetim-organizasyon',
+                salary : '15000'
+            },
+        ]
+    }
+    render () {
+        return (
+            <div className="App">
+                <Navbar title="User App"/>
+                <hr/>
+                <Users users={ this.state.mocUsers }/>
+            </div>
+        );
+    }
+
 }
 
 export default App;
