@@ -4,14 +4,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Col,Card, CardBody, CardHeader,CardText } from 'reactstrap';
 
 class User extends Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            isVisible : false
-        }
+    state = {
+        isVisible : false
     }
-
+    
     render() {
         const { name,department,salary } = this.props;
         const { isVisible } = this.state;
