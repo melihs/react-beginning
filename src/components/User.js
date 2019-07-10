@@ -5,8 +5,16 @@ import { Col,Card, CardBody, CardHeader,CardText } from 'reactstrap';
 
 class User extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            isVisible : false
+        }
+    }
+
     render() {
         const { name,department,salary } = this.props;
+        const { isVisible } = this.state;
         return (
             <div className="mb-4">
                 <Col md="4">
@@ -15,10 +23,14 @@ class User extends Component {
                             <h4 className="d-inline">{ name }</h4>
                             <FontAwesomeIcon icon="trash-alt" style={{ cursor :"pointer" }}/>
                         </CardHeader>
-                        <CardBody>
-                            <CardText>Maaş :  { salary }</CardText>
-                            <CardText>Departman :  { department }</CardText>
-                        </CardBody>
+                        {
+                            isVisible ?
+                                <CardBody>
+                                    <CardText>Maaş :  { salary }</CardText>
+                                    <CardText>Departman :  { department }</CardText>
+                                </CardBody>
+                                : null
+                        }
                     </Card>
                 </Col>
             </div>

@@ -13,9 +13,14 @@ function App() {
         <Navbar title="User App"/>
         <hr/>
         <User
-            name="melih şahin"
+            name="user 1"
             department="bilişim"
-            salary="5000"
+            salary="5000 TL"
+        />
+        <User
+            name="user 2"
+            department="tekstil"
+            salary="7500 TL"
         />
     </div>
   );
