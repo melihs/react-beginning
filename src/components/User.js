@@ -7,7 +7,8 @@ class User extends Component {
     state = {
         isVisible : false
     }
-    
+    onClickEvent = (number,e) => { console.log(number) }
+
     render() {
         const { name,department,salary } = this.props;
         const { isVisible } = this.state;
@@ -16,7 +17,7 @@ class User extends Component {
                 <Col md="4">
                     <Card>
                         <CardHeader className="d-flex justify-content-between">
-                            <h4 className="d-inline">{ name }</h4>
+                            <h4 className="d-inline" onClick={ this.onClickEvent.bind(this,34) }>{ name }</h4>
                             <FontAwesomeIcon icon="trash-alt" style={{ cursor :"pointer" }}/>
                         </CardHeader>
                         {
