@@ -3,10 +3,10 @@ import './App.css';
 import Users from './components/Users';
 import Navbar from './components/Navbar';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import {faCheckSquare,faTrashAlt} from '@fortawesome/free-solid-svg-icons';
+import {faUserAlt,faTrashAlt} from '@fortawesome/free-solid-svg-icons';
 import AddUser from './components/AddUser';
 
-library.add(faCheckSquare, faTrashAlt)
+library.add(faUserAlt, faTrashAlt)
 
 class App extends Component {
     render () {

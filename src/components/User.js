@@ -30,20 +30,36 @@ class User extends Component {
                         return (
                             <div className="mb-4">
                                 <Col md="4">
-                                    <Card >
-                                        <CardHeader className="d-flex justify-content-between" >
-                                            <h4 className="d-inline" onClick={ this.onClickEvent }>{ name }</h4>
+                                    <Card style={isVisible ? { backgroundColor : '#ffce00' } : null }>
+                                        <CardHeader
+                                            className="d-flex justify-content-between"
+                                            style={ isVisible ? { backgroundColor : '#665200',color : 'white' } : null }
+                                        >
+                                            <h4
+                                                className="d-inline"
+                                                onClick={ this.onClickEvent }>
+                                                <FontAwesomeIcon
+                                                    icon="user-alt"
+                                                /> { name }
+                                            </h4>
                                             <FontAwesomeIcon
                                                 onClick={ this.onDeleteUser.bind(this,dispatch) }
                                                 icon="trash-alt"
+                                                size="2x"
                                                 style={{ cursor :"pointer" }}
                                             />
                                         </CardHeader>
                                         {
                                             isVisible ?
                                                 <CardBody>
-                                                    <CardText>Maaş :  { salary } TL</CardText>
-                                                    <CardText>Departman :  { department }</CardText>
+                                                    <CardText>
+                                                        <strong>Maaş : </strong>
+                                                        { salary } TL
+                                                    </CardText>
+                                                    <CardText>
+                                                        <strong>Departman : </strong>
+                                                        { department }
+                                                    </CardText>
                                                 </CardBody>
                                                 : null
                                         }
