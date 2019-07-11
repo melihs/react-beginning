@@ -7,7 +7,7 @@ class User extends Component {
     state = {
         isVisible : false
     }
-    onClickEvent = (number,e) => {
+    onClickEvent = (e) => {
         this.setState({
             isVisible : !this.state.isVisible
         })
@@ -25,7 +25,7 @@ class User extends Component {
                 <Col md="4">
                     <Card >
                         <CardHeader className="d-flex justify-content-between" >
-                            <h4 className="d-inline" onClick={ this.onClickEvent.bind(this,34) }>{ name }</h4>
+                            <h4 className="d-inline" onClick={ this.onClickEvent }>{ name }</h4>
                             <FontAwesomeIcon onClick={ this.onDeleteUser } icon="trash-alt"style={{ cursor :"pointer" }} />
                         </CardHeader>
                         {
