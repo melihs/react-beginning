@@ -12,6 +12,10 @@ class User extends Component {
             isVisible : !this.state.isVisible
         })
     }
+    onDeleteUser = () => {
+        const { id,deleteUser } = this.props;
+        deleteUser(id);
+    }
 
     render() {
         const { name,department,salary } = this.props;
@@ -19,10 +23,10 @@ class User extends Component {
         return (
             <div className="mb-4">
                 <Col md="4">
-                    <Card>
-                        <CardHeader className="d-flex justify-content-between">
+                    <Card >
+                        <CardHeader className="d-flex justify-content-between" >
                             <h4 className="d-inline" onClick={ this.onClickEvent.bind(this,34) }>{ name }</h4>
-                            <FontAwesomeIcon icon="trash-alt" style={{ cursor :"pointer" }}/>
+                            <FontAwesomeIcon onClick={ this.onDeleteUser } icon="trash-alt"style={{ cursor :"pointer" }} />
                         </CardHeader>
                         {
                             isVisible ?
@@ -40,14 +44,18 @@ class User extends Component {
 }
 
 User.defaultProps = {
+    id : null,
     name : "bilgi yok",
     department : "bilgi yok",
-    salary : "bilgi yok"
+    salary : "bilgi yok",
+    deleteUser : null
 }
 User.propTypes = {
+    id : PropTypes.number.isRequired,
     name : PropTypes.string.isRequired,
     department : PropTypes.string.isRequired,
-    salary : PropTypes.string.isRequired
+    salary : PropTypes.string.isRequired,
+    deleteUser : PropTypes.func.isRequired
 }
 
 export default User;

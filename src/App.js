@@ -30,12 +30,17 @@ class App extends Component {
             },
         ]
     }
+    deleteUser = (id) => {
+        this.setState({
+           mocUsers : this.state.mocUsers.filter( mocUser => id !== mocUser.id)
+        })
+    }
     render () {
         return (
             <div className="App">
                 <Navbar title="User App"/>
                 <hr/>
-                <Users users={ this.state.mocUsers }/>
+                <Users deleteUser={ this.deleteUser } users={ this.state.mocUsers }/>
             </div>
         );
     }
