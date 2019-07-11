@@ -9,12 +9,16 @@
 ## Build Setup
 
 ``` bash
+# clone project
+$ git clone https://github.com/melihs/react-beginning.git
+$ cd react-beginning
+
 # install dependencies
-npm install
+$ npm install
 
 # serve with hot reload at localhost:3000
-npm start
+$ npm start
 
 # build for production with minification
-npm build
+$ npm build
 ```

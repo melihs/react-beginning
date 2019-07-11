@@ -1,7 +1,15 @@
 {
-  "name": "e-commerce-r",
+  "name": "react-beginning",
+  "description" : "fundementals with react js",
   "version": "0.1.0",
   "private": true,
+  "keywords": [],
+  "author": "melih sahin",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/melihs/react-beginning/issues"
+  },
+  "homepage": "https://github.com/melihs/react-beginning",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
@@ -34,5 +42,9 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ashleygwilliams/my_package.git"
+  }
 }
