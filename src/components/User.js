@@ -33,7 +33,11 @@ class User extends Component {
                                     <Card >
                                         <CardHeader className="d-flex justify-content-between" >
                                             <h4 className="d-inline" onClick={ this.onClickEvent }>{ name }</h4>
-                                            <FontAwesomeIcon onClick={ this.onDeleteUser.bind(this,dispatch) } icon="trash-alt"style={{ cursor :"pointer" }} />
+                                            <FontAwesomeIcon
+                                                onClick={ this.onDeleteUser.bind(this,dispatch) }
+                                                icon="trash-alt"
+                                                style={{ cursor :"pointer" }}
+                                            />
                                         </CardHeader>
                                         {
                                             isVisible ?
