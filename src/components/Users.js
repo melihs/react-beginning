@@ -1,33 +1,36 @@
 import React,{ Component } from 'react';
 import User from './User';
-import PropTypes from 'prop-types';
+import UserConsumer from '../context';
 
 class Users extends Component {
     render () {
-        const { users, deleteUser } = this.props;
         return (
-            <div>
+            <UserConsumer>
                 {
-                    users.map(user => {
+                    value => {
+                        const { mocUsers } = value;
                         return (
-                            <User
-                                key = { user.id }
-                                id = { user.id }
-                                name={ user.name }
-                                department={ user.department }
-                                salary={ user.salary }
-                                deleteUser={ deleteUser }
-                            />
+                            <div>
+                                {
+                                    mocUsers.map(mocUser => {
+                                        return (
+                                            <User
+                                                key = { mocUser.id }
+                                                id = { mocUser.id }
+                                                name={ mocUser.name }
+                                                department={ mocUser.department }
+                                                salary={ mocUser.salary }
+                                            />
+                                        )
+                                    })
+                                }
+                            </div>
                         )
-                    })
+                    }
                 }
-            </div>
+            </UserConsumer>
         )
     }
-}
-Users.propTypes = {
-    users : PropTypes.array.isRequired,
-    deleteUser : PropTypes.func.isRequired
 }
 export default Users;
 
