@@ -5,6 +5,7 @@
 ## Libraries in the Project
 - reactstrap https://github.com/reactstrap/reactstrap
 - react-fontawesome https://github.com/FortAwesome/react-fontawesome
+- react-pose https://popmotion.io/pose/
 ## Build Setup
 
 ``` bash
@@ -12,8 +13,8 @@
 npm install
 
 # serve with hot reload at localhost:3000
-yarn start
+npm start
 
 # build for production with minification
-yarn build
+npm build
 ```
